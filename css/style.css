@@ -208,6 +208,22 @@ li:last-child { margin-bottom: 0; }
 }
 .aside p:first-child { font-style: italic; color: var(--ink); }
 
+/* ---------- Case study (selected work) ---------- */
+.case-study { margin-top: 40px; }
+.case-study h3 {
+  font-size: 1.15rem;
+  margin: 4px 0 20px;
+}
+.case-study-cover {
+  display: block;
+  width: 100%;
+  max-width: 420px;
+  height: auto;
+  border: 1px solid var(--line);
+  margin: 0 0 24px;
+}
+.case-study p { font-size: 0.98rem; color: var(--ink-soft); }
+
 /* ---------- Index list (experience / education) ---------- */
 .index-list {
   display: flex;

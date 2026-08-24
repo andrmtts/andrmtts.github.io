@@ -16,6 +16,7 @@
     <nav class="main-nav" id="mainNav">
       <a href="#about" data-nav>About</a>
       <a href="#experience" data-nav>Experience</a>
+      <a href="#work" data-nav>Work</a>
       <a href="#skills" data-nav>Skills</a>
       <a href="#education" data-nav>Education</a>
       <a href="#contact" data-nav>Contact</a>
@@ -167,8 +168,43 @@
     </div>
   </section>
 
+  <!-- SELECTED WORK -->
+  <section id="work" class="section">
+    <div class="wrap wrap-narrow">
+      <h2>Selected work</h2>
+      <p class="section-lede">A personal project, not a client engagement — included for depth, not to pad the résumé.</p>
+
+      <article class="case-study">
+        <p class="eyebrow">2021 · Data Science Bootcamp final project</p>
+        <h3>Job_Offers.fit</h3>
+        <img class="case-study-cover" src="assets/images/job-offers-fit-cover.png" alt="Job_Offers.fit project cover, Data Science Bootcamp final project by André de Mattos" width="640" height="360" loading="lazy">
+        <p>
+          Built to help evaluate and prioritize job applications across several EU countries at
+          once, using data science rather than gut feel. It scrapes and scores LinkedIn listings
+          for Data Scientist and Data Analyst roles across 15 countries, then ranks them by fit.
+        </p>
+        <p>
+          Around 18,000 LinkedIn listings were scraped and enriched with Glassdoor (average
+          salary by title and country, plus company ratings) and Numbeo (cost of living and
+          quality-of-life indices by city). Job descriptions were cleaned and tokenized with
+          NLTK, vectorized with TF-IDF, reduced with PCA, and clustered with KMeans to group
+          similar roles into a content-based recommendation, output as a ranked table.
+        </p>
+        <p>
+          The main obstacles were practical: scraping errors and account blocks worked around
+          with proxies (APIs would have been cleaner, but cost money and need advance access),
+          and out-of-memory errors that better data cleaning fixed faster than reconfiguring for
+          more RAM.
+        </p>
+        <p>
+          <a href="https://public.tableau.com/app/profile/andr.mattos/viz/DSBootcampEDA/Dashboard1" target="_blank" rel="noopener">View the EDA dashboard on Tableau Public ↗</a>
+        </p>
+      </article>
+    </div>
+  </section>
+
   <!-- SKILLS -->
-  <section id="skills" class="section">
+  <section id="skills" class="section section-alt">
     <div class="wrap wrap-narrow">
       <h2>Skills</h2>
       <dl class="skill-list">
@@ -188,7 +224,7 @@
   </section>
 
   <!-- EDUCATION -->
-  <section id="education" class="section section-alt">
+  <section id="education" class="section">
     <div class="wrap wrap-narrow">
       <h2>Education</h2>
       <div class="index-list index-list-compact">
@@ -224,7 +260,7 @@
   </section>
 
   <!-- CONTACT -->
-  <section id="contact" class="section">
+  <section id="contact" class="section section-alt">
     <div class="wrap wrap-narrow">
       <h2>Get in touch</h2>
       <p>Open to Data &amp; Analytics leadership roles in banking, consulting and industry — Madrid or remote.</p>
