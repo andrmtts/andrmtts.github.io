@@ -174,6 +174,36 @@
       <p class="section-lede">Personal projects, not client engagements — included for depth, not to pad the résumé.</p>
 
       <article class="case-study">
+        <p class="eyebrow">2026 · Personal project</p>
+        <h3>SAP DELIVER → Databricks Data Product</h3>
+        <p>
+          Simulates a SAP-style data pipeline for the ISC <strong>DELIVER</strong> domain
+          (shipments, deliveries, warehouse management) landing in Databricks, built with the
+          same functional documentation a real project would carry: business requirements,
+          mapping spec, data dictionary, UAT test cases and a Jira-style tracking board. All
+          data is synthetic — no real SAP system or data is involved.
+        </p>
+        <p>
+          Bronze, silver and gold Delta Lake tables are built from PySpark notebooks, with a
+          parallel Delta Live Tables / Lakeflow Declarative Pipelines implementation carrying
+          data-quality expectations, both deployed via Databricks Asset Bundles. Incremental
+          ingestion runs through Auto Loader, upserts through MERGE and Change Data Feed, and
+          Unity Catalog governs access down to row-level security by business unit. The gold
+          layer feeds OTIF, lead time and fill rate KPIs, queried via the SQL Statement
+          Execution API for a dashboard.
+        </p>
+        <p>
+          Used deliberately as a certification-prep build: Time Travel, OPTIMIZE/Z-Order,
+          VACUUM and Liquid Clustering were all exercised against this project's own tables
+          rather than toy examples, with two real mistakes made — and fixed — documented along
+          the way.
+        </p>
+        <p>
+          <a href="https://github.com/andrmtts/sap-databricks-pipeline-ICS" target="_blank" rel="noopener">View the repo on GitHub ↗</a>
+        </p>
+      </article>
+
+      <article class="case-study">
         <p class="eyebrow">2021 · Data Science Bootcamp final project</p>
         <h3>Job_Offers.fit</h3>
         <a href="https://www.flipsnack.com/andrmtts/ds-final-project/full-view.html" target="_blank" rel="noopener">
@@ -201,36 +231,6 @@
           <a href="https://www.flipsnack.com/andrmtts/ds-final-project/full-view.html" target="_blank" rel="noopener">View the full presentation on Flipsnack ↗</a>
           <span aria-hidden="true">·</span>
           <a href="https://public.tableau.com/app/profile/andr.mattos/viz/DSBootcampEDA/Dashboard1" target="_blank" rel="noopener">View the EDA dashboard on Tableau Public ↗</a>
-        </p>
-      </article>
-
-      <article class="case-study">
-        <p class="eyebrow">2026 · Personal project</p>
-        <h3>SAP DELIVER → Databricks Data Product</h3>
-        <p>
-          Simulates a SAP-style data pipeline for the ISC <strong>DELIVER</strong> domain
-          (shipments, deliveries, warehouse management) landing in Databricks, built with the
-          same functional documentation a real project would carry: business requirements,
-          mapping spec, data dictionary, UAT test cases and a Jira-style tracking board. All
-          data is synthetic — no real SAP system or data is involved.
-        </p>
-        <p>
-          Bronze, silver and gold Delta Lake tables are built from PySpark notebooks, with a
-          parallel Delta Live Tables / Lakeflow Declarative Pipelines implementation carrying
-          data-quality expectations, both deployed via Databricks Asset Bundles. Incremental
-          ingestion runs through Auto Loader, upserts through MERGE and Change Data Feed, and
-          Unity Catalog governs access down to row-level security by business unit. The gold
-          layer feeds OTIF, lead time and fill rate KPIs, queried via the SQL Statement
-          Execution API for a dashboard.
-        </p>
-        <p>
-          Used deliberately as a certification-prep build: Time Travel, OPTIMIZE/Z-Order,
-          VACUUM and Liquid Clustering were all exercised against this project's own tables
-          rather than toy examples, with two real mistakes made — and fixed — documented along
-          the way.
-        </p>
-        <p>
-          <a href="https://github.com/andrmtts/sap-databricks-pipeline-ICS" target="_blank" rel="noopener">View the repo on GitHub ↗</a>
         </p>
       </article>
     </div>
