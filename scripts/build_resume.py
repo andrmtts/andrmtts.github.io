@@ -58,7 +58,7 @@ doc = SimpleDocTemplate(
 story = []
 
 story.append(Paragraph("André de Mattos", name_style))
-story.append(Paragraph("Data &amp; Analytics Manager &nbsp;&middot;&nbsp; Madrid, Spain", eyebrow_style))
+story.append(Paragraph("Data &amp; Analytics Manager", eyebrow_style))
 story.append(Paragraph(
     "I help senior leadership deploy a data-driven culture, leading complex data initiatives "
     "from concept to delivery &mdash; ensuring quality, scalability, clear communication across "
