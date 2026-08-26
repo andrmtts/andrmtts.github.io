@@ -11,7 +11,8 @@ css/style.css        Design system (colors, type, layout)
 js/main.js           Mobile menu, nav scroll-spy, footer year
 assets/favicon.svg   Favicon
 assets/fonts/        Self-hosted Source Serif 4 (OFL-licensed) used by both the site and the CV PDF
-assets/CV_AndreDeMattos.pdf   Downloadable résumé, styled to match the site
+assets/CV_AndreDeMattos.pdf   Downloadable résumé — André's own CV file, supplied directly
+scripts/build_resume.py       Unused for now: generates a site-styled PDF from reportlab (see below)
 ```
 
 ## Running locally
@@ -32,10 +33,9 @@ For GitHub Pages: Settings → Pages → Deploy from branch → `main` / root.
 ## Updating content
 
 - CV content lives directly in `index.html` (About, Experience, Skills, Education, Contact).
-- The downloadable CV PDF is generated from `scripts/build_resume.py` (reportlab), using the
-  same self-hosted Source Serif 4 font and palette as the site. After editing the CV content,
-  update the data in that script and re-run it:
-  ```
-  python3 scripts/build_resume.py
-  ```
-  This writes `CV_AndreDeMattos.pdf` in the current directory — move it into `assets/`.
+- `assets/CV_AndreDeMattos.pdf` is André's own CV file (his own template/formatting) — replace it
+  directly with a new export whenever he updates it. **Do not run `scripts/build_resume.py`** to
+  regenerate this file — that script produces a differently-styled PDF (matching the site's own
+  design) that André decided not to use in favor of his own CV format; running it would overwrite
+  the file with that other version. The script is kept only as a fallback in case a site-styled
+  PDF is wanted again in the future.
