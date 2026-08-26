@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" width="640" height="360" role="img"
+     aria-label="Architecture diagram: synthetic SAP source data flows through Auto Loader into Bronze, Silver and Gold Delta Lake layers governed by Unity Catalog, feeding a BI dashboard.">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#0f4c3a"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="640" height="360" fill="#fdfcf9"/>
+
+  <!-- Header -->
+  <text x="28" y="32" font-family="Menlo, Consolas, monospace" font-size="10" letter-spacing="2" fill="#8a8879">ARCHITECTURE</text>
+  <text x="612" y="32" font-family="Menlo, Consolas, monospace" font-size="9" fill="#8a8879" text-anchor="end">Synthetic data &#183; Portfolio build</text>
+  <text x="28" y="57" font-family="Georgia, 'Times New Roman', serif" font-weight="700" font-size="21" fill="#1a1a17">SAP DELIVER &#8594; Databricks</text>
+  <line x1="28" y1="70" x2="612" y2="70" stroke="#e6e2d5" stroke-width="1"/>
+
+  <!-- Pipeline boxes -->
+  <!-- Box 1: SAP Source -->
+  <rect x="40" y="92" width="96" height="94" rx="6" fill="#fdfcf9" stroke="#0f4c3a" stroke-width="1.4"/>
+  <text x="88" y="122" font-family="Georgia, 'Times New Roman', serif" font-weight="700" font-size="13" fill="#1a1a17" text-anchor="middle">SAP Source</text>
+  <text x="88" y="140" font-family="Menlo, Consolas, monospace" font-size="8.5" fill="#4a4941" text-anchor="middle">VBAK &#183; LIKP</text>
+  <text x="88" y="151" font-family="Menlo, Consolas, monospace" font-size="8.5" fill="#4a4941" text-anchor="middle">MARA &#183; MARD</text>
+  <text x="88" y="169" font-family="Menlo, Consolas, monospace" font-style="italic" font-size="8" fill="#8a8879" text-anchor="middle">(synthetic)</text>
+
+  <line x1="136" y1="139" x2="153" y2="139" stroke="#0f4c3a" stroke-width="1.4" marker-end="url(#arrow)"/>
+
+  <!-- Box 2: Bronze -->
+  <rect x="156" y="92" width="96" height="94" rx="6" fill="#fdfcf9" stroke="#0f4c3a" stroke-width="1.4"/>
+  <circle cx="242" cy="102" r="4" fill="#b08d57"/>
+  <text x="204" y="128" font-family="Georgia, 'Times New Roman', serif" font-weight="700" font-size="14" fill="#1a1a17" text-anchor="middle">Bronze</text>
+  <text x="204" y="146" font-family="Menlo, Consolas, monospace" font-size="8.5" fill="#4a4941" text-anchor="middle">Raw ingest</text>
+  <text x="204" y="157" font-family="Menlo, Consolas, monospace" font-size="8.5" fill="#4a4941" text-anchor="middle">Delta tables</text>
+
+  <line x1="252" y1="139" x2="269" y2="139" stroke="#0f4c3a" stroke-width="1.4" marker-end="url(#arrow)"/>
+
+  <!-- Box 3: Silver -->
+  <rect x="272" y="92" width="96" height="94" rx="6" fill="#fdfcf9" stroke="#0f4c3a" stroke-width="1.4"/>
+  <circle cx="358" cy="102" r="4" fill="#9aa0a6"/>
+  <text x="320" y="128" font-family="Georgia, 'Times New Roman', serif" font-weight="700" font-size="14" fill="#1a1a17" text-anchor="middle">Silver</text>
+  <text x="320" y="146" font-family="Menlo, Consolas, monospace" font-size="8.5" fill="#4a4941" text-anchor="middle">Cleansed &amp;</text>
+  <text x="320" y="157" font-family="Menlo, Consolas, monospace" font-size="8.5" fill="#4a4941" text-anchor="middle">conformed</text>
+
+  <line x1="368" y1="139" x2="385" y2="139" stroke="#0f4c3a" stroke-width="1.4" marker-end="url(#arrow)"/>
+
+  <!-- Box 4: Gold -->
+  <rect x="388" y="92" width="96" height="94" rx="6" fill="#fdfcf9" stroke="#0f4c3a" stroke-width="1.4"/>
+  <circle cx="474" cy="102" r="4" fill="#d4af37"/>
+  <text x="436" y="122" font-family="Georgia, 'Times New Roman', serif" font-weight="700" font-size="14" fill="#1a1a17" text-anchor="middle">Gold</text>
+  <text x="436" y="140" font-family="Menlo, Consolas, monospace" font-size="8.5" fill="#4a4941" text-anchor="middle">OTIF &#183; Lead time</text>
+  <text x="436" y="151" font-family="Menlo, Consolas, monospace" font-size="8.5" fill="#4a4941" text-anchor="middle">Fill rate</text>
+
+  <line x1="484" y1="139" x2="501" y2="139" stroke="#0f4c3a" stroke-width="1.4" marker-end="url(#arrow)"/>
+
+  <!-- Box 5: BI -->
+  <rect x="504" y="92" width="96" height="94" rx="6" fill="#fdfcf9" stroke="#0f4c3a" stroke-width="1.4"/>
+  <text x="552" y="128" font-family="Georgia, 'Times New Roman', serif" font-weight="700" font-size="13" fill="#1a1a17" text-anchor="middle">BI /</text>
+  <text x="552" y="144" font-family="Georgia, 'Times New Roman', serif" font-weight="700" font-size="13" fill="#1a1a17" text-anchor="middle">Dashboard</text>
+  <text x="552" y="163" font-family="Menlo, Consolas, monospace" font-size="8.5" fill="#4a4941" text-anchor="middle">SQL queries</text>
+
+  <!-- Governance connectors -->
+  <line x1="88" y1="186" x2="88" y2="214" stroke="#0f4c3a" stroke-width="1" stroke-dasharray="2,2" opacity="0.5"/>
+  <line x1="204" y1="186" x2="204" y2="214" stroke="#0f4c3a" stroke-width="1" stroke-dasharray="2,2" opacity="0.5"/>
+  <line x1="320" y1="186" x2="320" y2="214" stroke="#0f4c3a" stroke-width="1" stroke-dasharray="2,2" opacity="0.5"/>
+  <line x1="436" y1="186" x2="436" y2="214" stroke="#0f4c3a" stroke-width="1" stroke-dasharray="2,2" opacity="0.5"/>
+  <line x1="552" y1="186" x2="552" y2="214" stroke="#0f4c3a" stroke-width="1" stroke-dasharray="2,2" opacity="0.5"/>
+
+  <!-- Governance band -->
+  <rect x="40" y="214" width="560" height="26" rx="4" fill="#0f4c3a" opacity="0.08"/>
+  <rect x="40" y="214" width="560" height="26" rx="4" fill="none" stroke="#0f4c3a" stroke-width="0.75" opacity="0.35"/>
+  <text x="52" y="231" font-family="Menlo, Consolas, monospace" font-weight="700" font-size="10" letter-spacing="1" fill="#0f4c3a">UNITY CATALOG</text>
+  <text x="588" y="231" font-family="Menlo, Consolas, monospace" font-size="8.5" fill="#4a4941" text-anchor="end">Governance &#183; row-level security</text>
+
+  <!-- Footer -->
+  <line x1="28" y1="266" x2="612" y2="266" stroke="#e6e2d5" stroke-width="1"/>
+  <text x="28" y="286" font-family="Georgia, 'Times New Roman', serif" font-style="italic" font-size="11" fill="#4a4941">Auto Loader ingestion &#183; MERGE/CDF upserts &#183; deployed via Asset Bundles</text>
+  <text x="28" y="304" font-family="Menlo, Consolas, monospace" font-size="8.5" fill="#8a8879">github.com/andrmtts/sap-databricks-pipeline-ICS</text>
+  <text x="612" y="304" font-family="Menlo, Consolas, monospace" font-size="8.5" fill="#8a8879" text-anchor="end">Andr&#233; de Mattos &#183; 2026</text>
+</svg>

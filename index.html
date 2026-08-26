@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>André de Mattos</title>
-<meta name="description" content="André de Mattos — Data Engineer. Data &amp; analytics leadership across banking, industry and public sector. Madrid, Spain.">
+<meta name="description" content="André de Mattos — Data Engineer. Data &amp; analytics leadership across banking, industry and public sector.">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="css/style.css">
 </head>
@@ -33,7 +33,7 @@
   <!-- HERO -->
   <section class="hero">
     <div class="wrap">
-      <p class="eyebrow">Data Engineer · Madrid, Spain</p>
+      <p class="eyebrow">Data Engineer</p>
       <p class="hero-statement">
         I help senior leadership deploy a data-driven culture, leading complex data
         initiatives from concept to delivery — ensuring quality, scalability, clear
@@ -71,18 +71,17 @@
           I can get more personal then…
         </p>
         <p>
-          Hi, this whole page is detailed in a way I think creates a good suitability on
-          AI-powered profile screening. But you know, I am a human too! With a point to improve:
-          I am in constant battle to outsmart machines. It is getting harder and harder. That
-          attitude has brought me some headaches while troubleshooting, memory issues and mixed
-          feelings about software's new versions. I can obsess over a bug, or a slow workflow.
-          Most of those fights are often followed by great rewards, though. Mr. Robot vibes
-          aside, I love that "duality" of human x machine. To join discussions on what level of
-          technology usage is good or bad. I've put in the effort to write this much, no AI
-          enhancement will be done in this profile!
+          I love how technology makes life and work easier—but when it creates headaches instead, I find my purpose. I thrive on uncovering the root cause, whether it is a hidden bug or a slow, frustrating workflow.
         </p>
         <p>
-          Besides being nerdy, I enjoy being part of a high energy, multicultural,
+          Earlier in my career, a "me versus the machine" mindset kept me motivated. Working with AI evolved that philosophy into "me plus the machine" versus the endless scope of what we can improve.
+          The most exciting challenges sit precisely where human intuition meets system design. I want to build better tools, clearer workflows, and seamless digital experiences. When software aligns perfectly with how people actually think, it unlocks true human potential. 
+        </p>
+        <p>
+          That is the impact I am chasing: building purposeful technology that moves us all forward.
+        </p>
+        <p>
+          I enjoy being part of a high energy, multicultural,
           cross-functional environment. A mentor once called me a "Free Electron", I thought it
           was pretty cool. In a working environment I always bring a positive attitude, assertive
           communication, willingness to help and share new knowledge. I already got some good
@@ -160,12 +159,47 @@
   <section id="work" class="section">
     <div class="wrap wrap-narrow">
       <h2>Selected work</h2>
-      <p class="section-lede">A personal project, not a client engagement — included for depth, not to pad the résumé.</p>
+      <p class="section-lede">Personal projects, not client engagements — included for depth, not to pad the résumé.</p>
+
+      <article class="case-study">
+        <p class="eyebrow">2026 · Personal project</p>
+        <h3>SAP DELIVER → Databricks Data Product</h3>
+        <a href="https://github.com/andrmtts/sap-databricks-pipeline-ICS" target="_blank" rel="noopener">
+          <img class="case-study-cover" src="assets/images/sap-databricks-architecture-cover.svg" alt="Architecture diagram — synthetic SAP source data flows through Auto Loader into Bronze, Silver and Gold Delta Lake layers governed by Unity Catalog, feeding a BI dashboard" width="640" height="360" loading="lazy">
+        </a>
+        <p>
+          Simulates a SAP-style data pipeline for the ISC <strong>DELIVER</strong> domain
+          (shipments, deliveries, warehouse management) landing in Databricks, built with the
+          same functional documentation a real project would carry: business requirements,
+          mapping spec, data dictionary, UAT test cases and a Jira-style tracking board. All
+          data is synthetic — no real SAP system or data is involved.
+        </p>
+        <p>
+          Bronze, silver and gold Delta Lake tables are built from PySpark notebooks, with a
+          parallel Delta Live Tables / Lakeflow Declarative Pipelines implementation carrying
+          data-quality expectations, both deployed via Databricks Asset Bundles. Incremental
+          ingestion runs through Auto Loader, upserts through MERGE and Change Data Feed, and
+          Unity Catalog governs access down to row-level security by business unit. The gold
+          layer feeds OTIF, lead time and fill rate KPIs, queried via the SQL Statement
+          Execution API for a dashboard.
+        </p>
+        <p>
+          Used deliberately as a certification-prep build: Time Travel, OPTIMIZE/Z-Order,
+          VACUUM and Liquid Clustering were all exercised against this project's own tables
+          rather than toy examples, with two real mistakes made — and fixed — documented along
+          the way.
+        </p>
+        <p>
+          <a href="https://github.com/andrmtts/sap-databricks-pipeline-ICS" target="_blank" rel="noopener">View the repo on GitHub ↗</a>
+        </p>
+      </article>
 
       <article class="case-study">
         <p class="eyebrow">2021 · Data Science Bootcamp final project</p>
         <h3>Job_Offers.fit</h3>
-        <img class="case-study-cover" src="assets/images/job-offers-fit-cover.png" alt="Job_Offers.fit project cover, Data Science Bootcamp final project by André de Mattos" width="640" height="360" loading="lazy">
+        <a href="https://www.flipsnack.com/andrmtts/ds-final-project/full-view.html" target="_blank" rel="noopener">
+          <img class="case-study-cover" src="assets/images/job-offers-fit-cover.png" alt="Job_Offers.fit project cover — open the full presentation on Flipsnack" width="640" height="360" loading="lazy">
+        </a>
         <p>
           Built to help evaluate and prioritize job applications across several EU countries at
           once, using data science rather than gut feel. It scrapes and scores LinkedIn listings
@@ -185,6 +219,8 @@
           more RAM.
         </p>
         <p>
+          <a href="https://www.flipsnack.com/andrmtts/ds-final-project/full-view.html" target="_blank" rel="noopener">View the full presentation on Flipsnack ↗</a>
+          <span aria-hidden="true">·</span>
           <a href="https://public.tableau.com/app/profile/andr.mattos/viz/DSBootcampEDA/Dashboard1" target="_blank" rel="noopener">View the EDA dashboard on Tableau Public ↗</a>
         </p>
       </article>
@@ -219,7 +255,7 @@
           <div class="index-body">
             <h3>Data Science Bootcamp</h3>
             <p class="index-org">ID Digital School · Madrid, Spain — 432 hours</p>
-            <p>Built an NLP/ML job-recommender system ranking 18,000+ scraped EU job listings by fit, cost of living, climate and job-density metrics.</p>
+            <p>Python (Pandas, Scikit-learn, NLTK), web scraping, NLP, machine learning (clustering, TF-IDF, PCA), SQL, data visualization.</p>
           </div>
         </article>
 
@@ -249,7 +285,7 @@
   <section id="contact" class="section section-alt">
     <div class="wrap wrap-narrow">
       <h2>Get in touch</h2>
-      <p>Open to Data &amp; Analytics leadership roles in banking, consulting and industry — Madrid or remote.</p>
+      <p>Open to Data &amp; Analytics leadership roles in banking, consulting and industry — open to opportunities globally.</p>
       <p class="hero-links">
         <a href="mailto:andre.mtts@icloud.com">andre.mtts@icloud.com</a>
         <span aria-hidden="true">·</span>
@@ -265,7 +301,6 @@
 <footer class="site-footer">
   <div class="wrap footer-inner">
     <span>© <span id="year"></span> André de Mattos</span>
-    <span>Madrid, Spain</span>
   </div>
 </footer>
 

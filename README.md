@@ -1,4 +1,6 @@
-# personal-website
+# andrmtts.github.io
+
+https://andrmtts.github.io/
 
 André de Mattos — personal CV / portfolio site. A single-page, plain-text-first site
 built with plain HTML, CSS and JavaScript (no build step, no dependencies).
